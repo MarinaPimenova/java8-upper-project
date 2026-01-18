@@ -1,4 +1,4 @@
-package com.hw.jmp.service;
+package com.hw.jmp.api.service;
 
 import com.hw.jmp.dto.BankCard;
 import com.hw.jmp.dto.BankCardType;

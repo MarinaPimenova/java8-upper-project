@@ -9,7 +9,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
-
 @SuppressWarnings("unchecked")
 public class ServiceImpl implements Service {
     @Override
@@ -17,6 +16,9 @@ public class ServiceImpl implements Service {
 
     }
 
+    //  handle scenarios where a subscription is not found,
+    //  specifically for use with the orElseThrow method on Optional
+    //  within the getSubscriptionByBankCardNumber
     @Override
     public Optional<Subscription> getSubscriptionByBankCardNumber(String cardNumber) {
         return Optional.empty();
