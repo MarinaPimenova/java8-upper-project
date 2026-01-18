@@ -167,9 +167,6 @@ Key configuration details:
 
 This project is provided for learning and evaluation purposes. No commercial license is implied.
 
-```
-```
-
 
 # DEV Notes
 ## Parent POM
