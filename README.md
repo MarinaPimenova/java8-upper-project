@@ -8,6 +8,7 @@ The project is built on top of the **jmp-parent** base module and implements ban
 
 ## 📦 Project Structure
 
+jmp-parent
 │
 ├── jmp-bank-api
 ├── jmp-dto
@@ -15,7 +16,6 @@ The project is built on top of the **jmp-parent** base module and implements ban
 ├── jmp-cloud-bank-impl
 ├── jmp-cloud-service-impl
 └── pom.xml
-
 
 ### Module Overview
 
@@ -32,11 +32,11 @@ The project is built on top of the **jmp-parent** base module and implements ban
 
 ## 🛠️ Technology Stack
 
-- **Java Development Kit**: Java 21
-- **Build Tool**: Apache Maven
-- **Version Control**: Git
-- **Testing Framework**: JUnit 5
-- **IDE**: IntelliJ IDEA / Eclipse
+- **Java Development Kit**: Java 21  
+- **Build Tool**: Apache Maven  
+- **Version Control**: Git  
+- **Testing Framework**: JUnit 5  
+- **IDE**: IntelliJ IDEA / Eclipse  
 
 ---
 
@@ -54,89 +54,98 @@ Verify installations:
 java -version
 mvn -version
 git --version
-```
+````
 
-# Getting Started
-Clone the Repository
+---
+
+## 🚀 Getting Started
+
+### Clone the Repository
+
 ```bash
 git clone <repository-url>
 cd jmp-parent
-
 ```
-# Build the Project
-```shell
+
+### Build the Project
+
+```bash
 mvn clean install
-
 ```
-🧩 Implemented Tasks
-1. Bank Card Creation Logic
 
-Module: jmp-cloud-bank-impl
+---
+
+## 🧩 Implemented Tasks
+
+### 1. Bank Card Creation Logic
+
+**Module**: `jmp-cloud-bank-impl`
 
 Implemented the method:
 
+```java
 BankCard createBankCard(User user, BankCardType cardType)
+```
 
+**Behavior**:
 
-Behavior:
+* Returns a `CreditBankCard` when `BankCardType.CREDIT` is provided
+* Returns a `DebitBankCard` when `BankCardType.DEBIT` is provided
+* Uses modern Java features (`var`, switch expressions where applicable)
 
-Returns a CreditBankCard when BankCardType.CREDIT is provided
+---
 
-Returns a DebitBankCard when BankCardType.DEBIT is provided
+### 2. Service Implementation
 
-Uses modern Java features (var, switch expressions where applicable)
+**Module**: `jmp-cloud-service-impl`
 
-2. Service Implementation
+* Added a full implementation of `ServiceImpl`
+* Integrated bank API logic
+* Applied functional programming concepts (lambdas, streams)
 
-Module: jmp-cloud-service-impl
+---
 
-Added a full implementation of ServiceImpl
-
-Integrated bank API logic
-
-Applied functional programming concepts (lambdas, streams)
-
-3. Modern Java Usage
+### 3. Modern Java Usage
 
 The project demonstrates:
 
-var for local variable inference
+* `var` for local variable inference
+* Lambda expressions
+* Java Stream API
+* Java 21 language improvements where applicable
+* Clean and readable code structure
 
-Lambda expressions
-
-Java Stream API
-
-Java 21 language improvements where applicable
-
-Clean and readable code structure
+---
 
 ## 🧪 Testing
 
-Framework: JUnit 5
+* **Framework**: JUnit 5
+* Unit tests cover:
 
-Unit tests cover:
-
-Bank card creation logic
-
-Core service functionality
-
-Tests are executed automatically during the Maven build phase
+    * Bank card creation logic
+    * Core service functionality
+* Tests are executed automatically during the Maven build phase
 
 Run tests explicitly:
 
+```bash
 mvn test
+```
 
-📄 Maven Configuration
+---
+
+## 📄 Maven Configuration
 
 Key configuration details:
 
-Java source/target compatibility: 21
+* Java source/target compatibility: **21**
+* Centralized plugin and dependency management via `jmp-parent`
+* JUnit 5 configured via `maven-surefire-plugin`
 
-Centralized plugin and dependency management via jmp-parent
-
-JUnit 5 configured via maven-surefire-plugin
+---
 
 ## ✅ Evaluation Criteria Alignment
+
 | Criterion         | Status                                      |
 | ----------------- | ------------------------------------------- |
 | **Code Quality**  | Clean, modular, readable structure          |
@@ -144,14 +153,23 @@ JUnit 5 configured via maven-surefire-plugin
 | **Java Features** | Streams, lambdas, `var`, modern Java idioms |
 | **Testing**       | Unit tests provided with JUnit 5            |
 
+---
 
 ## 📌 Notes
 
-This project is intended for educational and practical assessment purposes.
+* This project is intended for educational and practical assessment purposes.
+* All implementations follow clean code and SOLID principles.
+* The modular structure allows easy extension and maintenance.
 
-All implementations follow clean code and SOLID principles.
+---
 
-The modular structure allows easy extension and maintenance.
+## 📜 License
+
+This project is provided for learning and evaluation purposes. No commercial license is implied.
+
+```
+```
+
 
 # DEV Notes
 ## Parent POM
