@@ -5,12 +5,22 @@ import com.hw.jmp.dto.User;
 import java.time.LocalDate;
 import java.util.Random;
 import java.util.function.Supplier;
+import java.util.stream.LongStream;
 
 public class UserGenerator {
 
     private static final Random RANDOM = new Random();
 
-    public static Supplier<User> randomUserSupplier = () -> {
+    public Cache<Long, User> generateUserCache()
+    {
+        Cache<Long, User> userCache = new Cache<>();
+        // Generate and cache users using lambda
+        LongStream.rangeClosed(1, 10)
+                .forEach(i -> userCache.put(i, randomUserSupplier.get()));
+        return userCache;
+    }
+
+    Supplier<User> randomUserSupplier = () -> {
         String name = "Name" + RANDOM.nextInt(1000);
         String surname = "Surname" + RANDOM.nextInt(1000);
 
