@@ -33,7 +33,7 @@ public interface Service {
             return false;
         }
 
-        long age = ChronoUnit.YEARS.between(
+        var age = ChronoUnit.YEARS.between(
                 user.getBirthday(),
                 LocalDate.now()
         );

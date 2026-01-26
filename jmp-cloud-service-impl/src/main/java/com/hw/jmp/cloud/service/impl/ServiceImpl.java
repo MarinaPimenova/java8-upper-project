@@ -41,6 +41,7 @@ public class ServiceImpl implements Service {
 
     @Override
     public List<User> getAllUsers() {
-        return new ArrayList<>(userCache.getAll().values());
+        var users = new HashSet<>(userCache.getAll().values());
+        return new ArrayList<>(users);
     }
 }

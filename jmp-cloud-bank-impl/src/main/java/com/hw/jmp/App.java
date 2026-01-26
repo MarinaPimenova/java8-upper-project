@@ -11,9 +11,8 @@ public class App
 {
     public static void main( String[] args )
     {
-
         // Generate users and store them in Cache
-        UserGenerator userGenerator = new UserGenerator();
+        var userGenerator = new UserGenerator();
         Cache<Long, User> userCache = userGenerator.generateUserCache();
 
         BankCardGenerator bankCardGenerator = new BankCardGenerator();
